@@ -1,0 +1,12 @@
+{
+   "name": "Projeto-Evento",
+   "version": "1.0.0",
+   "description": "Projeto escolar com intuito de treinamento das tecnologias Html, Css e Javacript, que cronometra o tempo restante até a chegada de um evento de livre escolha.",
+   "main": "index.html",
+   "scripts": {
+      "start": "line-server",
+      "lint": "eslint ."
+   },
+   "author": "Miguel Fernandes Silva",
+   "license": "MIT"
+}
