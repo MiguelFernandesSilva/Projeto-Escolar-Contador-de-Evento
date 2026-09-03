@@ -48,3 +48,39 @@ const elementoContador = document.getElementById('dias');
 if (elementoContador) {
     contagemRegressiva(tempoRestante());
 }
+
+/* CARROSSEL */
+const carousel = document.getElementById('carousel');
+const slides = document.querySelectorAll('.slide');
+
+let imageIndex = 0;
+
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const carouselBg = document.getElementById('carouselBg');
+
+function updateCarousel(){
+    slides.forEach(slide => {
+        slide.classList.remove('active-img')
+    });
+    slides[imageIndex].classList.add('active-img');
+}
+function previousSlide(){
+    imageIndex--;
+    if(imageIndex < 0){
+        imageIndex = slides.length - 1;
+    }
+    console.log(imageIndex);
+    updateCarousel();
+}
+function nextSlide(){
+    imageIndex++;
+    if(imageIndex >= slides.length){
+        imageIndex = 0;
+    }
+    console.log(imageIndex);
+    updateCarousel();
+}
+
+prevBtn.addEventListener('click', previousSlide);
+nextBtn.addEventListener('click', nextSlide);
