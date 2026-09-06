@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Miguel Fernandes Silva">
+    <meta name="description" content="Informações sobre o evento escolhido">
+    <meta name="keywords" content="Trios, Atrações, Programação, Horários">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon_io/favicon-32x32.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <title> BDA 10 ANOS | Sobre o Evento </title>
+</head>
+<body>
+<header>
+    <div class="header-logo" id="logoContainer">
+        <img src="../assets/icons/logo.png" alt="BDA 10 Anos" class="logo" id="logo">
+        <div>
+            <p> BATALHA DA ALDEIA </p>
+            <span> 10 Anos de História </span>
+        </div>
+    </div>
+    <div class=" header-links">
+        <ul class="links-list">
+            <li><a href="../index.html" target="_self"> HOME </a></li>
+            <li><a href="#" target="_self"> EVENTO </a></li>
+            <li><a href="./contatos.html" target="_self"> CONTATOS </a></li>
+        </ul>
+    </div>
+    <div class="header-button">
+        <button class="green-btn biggify" id="btnTickets">
+            GARANTA SEU LUGAR
+        </button>
+    </div>
+</header>
+<main>
+    <!-- INTRODUÇÃO -->
+    <div class="introduction">
+        <div>
+            <h3> SOBRE O EVENTO </h3>
+            <h1> RAÍZES DA NOVA TERRA </h1>
+            <p> A batalha da aldeia completa 10 anos de história! </p>
+            <p> Uma caminhada construida a partir da rua, dos sonhos, da cultura e da força de quem fez o movimento acontecer. </p>
+            <p> Mais que um evento, um marco. Mais que rimas, um legado.</p>
+            <br>
+            <p> Nosssas raízes nos troxeram até aqui. </p>
+            <p> E delas que nasce a nova terra. </p>
+        </div>
+        <div class="container-image"></div>
+    </div>
+
+    <!-- COMPONENTES -->
+    <section class="components">
+        <!-- Data -->
+        <div class="component-with-icon">
+            <div>
+                <i class="fa-solid fa-calendar-days component-icon"></i>
+            </div>
+            <div>
+                <h2> DATA (FALSA) </h2>
+                <p> Dia 09 de Outubro de 2026 </p>
+            </div>
+        </div>
+
+        <!-- Horário -->
+        <div class="component-with-icon">
+            <div>
+                <i class="fa-solid fa-clock component-icon"></i>
+            </div>
+            <div>
+                <h2> HORÁRIO </h2>
+                <p> Das 13H às 22H </p>
+            </div>
+        </div>
+        
+        <!-- Local -->
+        <div class="component-with-icon">
+            <div>
+                <i class="fa-solid fa-location-dot component-icon"></i>
+            </div>
+            <div>
+                <h2> LOCAL </h2>
+                <p id="place" style="cursor: pointer;"> Vale do Anhangabaú - SP </p>
+            </div>
+        </div>
+
+        <!-- Transmissão -->
+        <div class="component-with-icon">
+            <div>
+                <i class="fa-solid fa-video component-icon"></i>
+            </div>
+            <div>
+                <h2> TRANSMISSÃO </h2>
+                <ul>
+                    <li id="podpahYoutube">
+                        <i class="fa-brands fa-youtube list-logo"></i>
+                        PODPAH
+                    </li>
+                    <li id="bdaTwitch">
+                        <i class="fa-brands fa-twitch list-logo"></i>
+                        BDA
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMAÇÃO -->
+    <section class="schedule">
+        <!-- Cronograma -->
+        <div class="container-schedule">
+            <h1> PROGRAMAÇÃO </h1>
+            <table class="cronogram">
+                <tbody>
+                    <tr>
+                        <td> 13h00 </td>
+                        <td> Live de Boas Vindas com Zuluzão e Lili na voz </td>
+                    </tr>
+                    <tr>
+                        <td> 12h00 </td>
+                        <td> Abertura dos portões </td>
+                    </tr>
+                    <tr>
+                        <td> 13h00 </td>
+                        <td> Cerimônia de abertura com Bob13 </td>
+                    </tr>
+                    <tr>
+                        <td> 13h30 </td>
+                        <td> Batalha de DJs </td>
+                    </tr>
+                    <tr>
+                        <td> 13h50 </td>
+                        <td> Batalha de Breaking </td>
+                    </tr>
+                    <tr>
+                        <td> 14h10 </td>
+                        <td> Início da batalha de Graffiti </td>
+                    </tr>
+                    <tr>
+                        <td> 14h20 </td>
+                        <td> Freestyle de abertura: Emicida, Projota e Rashid </td>
+                    </tr>
+                    <tr>
+                        <td> 15h00 </td>
+                        <td> Início das batalhas de rimas </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Atrações -->
+        <div class="attractions">
+            <h1> O QUE TEREMOS </h1>
+            <ul>
+                <li> Batalha de Rimas </li>
+                <li> Batalha de DJs </li>
+                <li> Batalha de Graffiti </li>
+                <li> Batalha de Breaking </li>
+                <li> Stands de Marcas Parceiras </li>
+                <li> Foodtrucks e Bebidas </li>
+                <li> Animadores de evento e mais </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- EDIÇÕES ANTERIORES -->
+    <section class="prev-edictions">
+        <h1> EDIÇÕES ANTERIORES </h1>
+        <table>
+            <colgroup>
+                <col style="width: 35%">
+                <col style="width: 25%">
+                <col style="width: 25%">
+                <col style="width: 7.5%">
+                <col style="width: 7.5%">
+            </colgroup>
+
+            <thead>
+                <th> ANO </th>
+                <th> TRIO CAMPEÃO </th>
+                <th> TRIO VICE-CAMPEÃO </th>
+                <th> PLACAR </th>
+                <th> MVPs </th>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td> BDA 1 ANO (2017) </td>
+                    <td> César, Dudu e Araps </td>
+                    <td> Thiago, Leozin e Chris </td>
+                    <td> 2 X 1 </td>
+                </tr>
+                <tr>
+                    <td> BDA 2 ANOS (2018) </td>
+                    <td> César, Dudu e Noventa </td>
+                    <td> Choice, Olhinho e Thiago </td>
+                    <td> 2 X 1 </td>
+                </tr>
+                <tr>
+                    <td> BDA 3 ANOS (2019) </td>
+                    <td> Noventa, Kant e Salvador </td>
+                    <td> Tavin, BMO e Thiago </td>
+                    <td> 2 X 0 </td>
+                </tr>
+                <tr>
+                    <td> BDA 4 ANOS (2020) </td>
+                    <td> Guerra, Nauí e Refel </td>
+                    <td> Thiago, Krawk e Kant </td>
+                    <td> 2 X 1 </td>
+                </tr>
+                <tr>
+                    <td> BDA 5 ANOS (2021) </td>
+                    <td> Jotapê, Big Mike e Apollo </td>
+                    <td> Kant, Krawk e Bask </td>
+                    <td> 3 X 0 </td>
+                </tr>
+                <tr>
+                    <td> BDA 6 ANOS (2022) </td>
+                    <td> Neo, Kant e Prado </td>
+                    <td> Jotapê, Dudu e Jaya Luuck </td>
+                    <td> 3 X 2 </td>
+                    <td> Neo </td>
+                </tr>
+                <tr>
+                    <td> BDA 7 ANOS: Supere seus Limites (2023) </td>
+                    <td> Jotapê, Neo e Big Mike </td>
+                    <td> Guri, Barreto e Noventa </td>
+                    <td> 3 X 0 </td>
+                    <td> Jotapê </td>
+                </tr>
+                <tr>
+                    <td> BDA 8 ANOS: Rumo ao Zênite (2024) </td>
+                    <td> Apollo, Neo e Tavin </td>
+                    <td> Jotapê, Guri e Barreto </td>
+                    <td> 3 X 0 </td>
+                    <td> Apollo </td>
+                </tr>
+                <tr>
+                    <td> BDA 9 ANOS: O Futuro em Seus Olhos (2025) </td>
+                    <td> Bask, Japa e Kroy </td>
+                    <td> Guri, Big Mike e Devilzinha </td>
+                    <td> 3 X 2 </td>
+                    <td> Kroy </td>
+                </tr>
+                <tr>
+                    <td> BDA 10 ANOS: Raízes da Nova Terra (2026) </td>
+                    <td> Apollo, Jotapê e Negrote </td>
+                    <td> Barreto, Big Mike e César </td>
+                    <td> 3 X 2 </td>
+                    <td> Jotapê </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-logo">
+        <img src="../assets/icons/logo.png" alt="BDA 10 ANOS">
+        <div>
+            <h1> BATALHA <br> DA ALDEIA </h1>
+            <p> Do chão que viemos, para o futuro que vamos criar. </p>
+        </div>
+    </div>
+    
+    <div class="footer-nav">
+        <h1> NAVEGAÇÃO </h1>
+         <ul>
+            <li>
+                <a href="../index.html" target="_self"> Home </a>
+            </li>
+            <li>
+                <a href="#" target="_self"> Evento </a>
+            </li>
+            <li>
+                <a href="contatos.html" target="_self"> Contatos </a>
+            </li>
+            <li>
+                <a href="atracoes.html" target="_self"> Atrações </a>
+            </li>
+            <li>
+                <a href="ingresso.html" target="_self"> Ingressos </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer-socials">
+        <h1> SIGA NOS </h1>
+        <ul>
+            <li>
+                <i class="fa-brands fa-instagram social-icon"></i>
+                <a href="https://www.instagram.com/batalhadaaldeia" target="_blank">
+                    @bdaespecialdetrios
+                </a>
+            </li>
+            <li>
+                <i class="fa-brands fa-youtube social-icon"></i>
+                <a href="https://www.youtube.com/@BatalhaDaAldeia" target="_blank"> BDA - Batalha da Aldeia </a>
+            </li>
+            <li>
+                <i class="fa-brands fa-tiktok social-icon"></i>
+                <a href="https://www.tiktok.com/@batalhadaaldeiabda" target="_blank"> @batalhadaaldeiabda </a>
+            </li>
+            <li>
+                <i class="fa-solid fa-globe social-icon"></i>
+                <a href="https://batalhadaaldeia.com.br/" target="_blank"> Site oficial da BDA </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+    
+    <script src="https://kit.fontawesome.com/43e593e5ea.js" crossorigin="anonymous" defer></script>
+    <script src="../javascript/script.js" defer></script>
+    <script src="../javascript/event.js" defer></script>
+</body>
+</html>
