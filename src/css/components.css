@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedgwick+Ave&display=swap');
+
+:root{
+    --bg-1: #f4f6f2;
+    --bg-2: #e9e3d6;
+    --bg-3: #c5c0b5;
+    --text: #333;
+    --green1: #2e7d32;
+    --green2: #1f3d2e;
+    --orange: #c97a3d;
+
+    --sedwick: "Sedgwick Ave", cursive;
+    --oswald: "Oswald", sans-serif;
+    --merriweather: "Merriweather", serif;
+    --poppin: 'Poppin', sans-serif;
+    --fira-code: "Fira Code", monospace;
+}
+
+/* BOTÕES */
+.green-btn{
+    border: none;
+    border-radius: 5px;
+    background: var(--green2);
+    color: white;
+    font-weight: 600;
+    font-size: 0.7em;
+    font-family: var(--poppin);
+    cursor: pointer;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: .5s ease;
+}
+    .green-btn:hover{
+        background: #284d3a;
+    }
+    .green-btn.translate:hover{
+        transform: translateY(-5px);
+    }
+    .green-btn.biggify:hover{
+        transform: scale(1.05);
+    }
+
+.white-btn{
+    border: 1px solid var(--green2);
+    border-radius: 5px;
+    background: var(--bg-1);
+    color: var(--green2);
+    font-weight: 600;
+    font-size: 0.7em;
+    font-family: var(--poppin);
+    cursor: pointer;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: .5s ease;
+}
+    .white-btn:hover{
+        background: #e6e7e4;
+    }
+    .white-btn.translate:hover{
+        transform: translateY(-5px);
+    }
+    .white-btn.biggify:hover{
+        transform: scale(1.05);
+    }
+
+/* CARDS */
+.card{
+    max-height: 400px;
+    border: 1px solid var(--text);
+    border-radius: 20px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform .5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card:hover{
+    transform: scale(1.04);
+}
+    .card img{
+        width: 100%;
+        height: 50%;
+        border-bottom: 1px solid var(--text);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-fit: cover;
+    }
+    .card h3{
+        font-size: 25px;
+        letter-spacing: 1px;
+        line-height: 2;
+        color: var(--green2);
+    }
+    .card p{
+        font-size: 16px;
+        text-align: justify;
+        margin: 0 5%;
+    }
+
+/* TEXTOS */
+p, td{
+    font-family: var(--poppin);
+}
+h1, h2, h3, h4, h5, h6, th{
+    font-family: var(--oswald);
+}
+
+/* FORMULÁRIOS */
+input{
+    width: 90%;
+    height: 40px;
+    border: 1px solid var(--bg-3);
+    border-radius: 5px;
+    padding: 0 10px;
+}
+textarea{
+    width: 90%;
+    height: 200px;
+    border: 1px solid var(--bg-3);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: var(--poppin);
+    resize: none;
+}
