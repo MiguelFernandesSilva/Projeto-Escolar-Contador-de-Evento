@@ -244,19 +244,16 @@
         <h1> NAVEGAÇÃO </h1>
         <ul>
             <li>
-                <a href="./index.html" target="_self"> Home </a>
+                <a href="../../index.html" target="_self"> Home </a>
             </li>
             <li>
-                <a href="./pages/evento.html" target="_self"> Evento </a>
+                <a href="./evento.html" target="_self"> Evento </a>
             </li>
             <li>
-                <a href="./pages/contatos.html" target="_self"> Contatos </a>
+                <a href="./contatos.html" target="_self"> Contatos </a>
             </li>
             <li>
-                <a href="./pages/atracoes.html" target="_self"> Atrações </a>
-            </li>
-            <li>
-                <a href="./pages/ingresso.html" target="_self"> Ingressos </a>
+                <a href="#" target="_self"> Ingressos </a>
             </li>
         </ul>
     </div>
@@ -286,10 +283,9 @@
 </footer>
 
     <script src="https://kit.fontawesome.com/43e593e5ea.js" crossorigin="anonymous" defer></script>
-    <script src="../javascript/script.js" defer></script>
     <script src="../javascript/tickets.js" defer></script>
     <script>
-        const ticketBtn = document.getElementById('btnTickets');
-        ticketBtn.addEventListener('click', (event) => location.reload());
+        const logo = document.getElementById('logoContainer');
+        logo.addEventListener('click', () => window.open('../../index.html', '_self'));
     </script>
 </body>

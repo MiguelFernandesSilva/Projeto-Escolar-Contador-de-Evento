@@ -143,7 +143,7 @@
                 <input type="email" name="email" id="email" placeholder="Email" aria-label="Email" spellcheck="false" autocorrect="off">
                 <input type="text" name="subject" id="subject" placeholder="Assunto" aria-label="Assunto">
                 <textarea name="mesage" id="mesage" placeholder="Mensagem" aria-label="Mensagem"></textarea>
-                <button type="button" class="green-btn translate"> 
+                <button class="green-btn translate"> 
                     ENVIAR MENSAGEM
                     <i class="fa-solid fa-paper-plane"></i>
                 </button>
@@ -165,19 +165,16 @@
         <h1> NAVEGAÇÃO </h1>
          <ul>
             <li>
-                <a href="../index.html" target="_self"> Home </a>
+                <a href="../../index.html" target="_self"> Home </a>
             </li>
             <li>
-                <a href="#" target="_self"> Evento </a>
+                <a href="./evento.html" target="_self"> Evento </a>
             </li>
             <li>
-                <a href="contatos.html" target="_self"> Contatos </a>
+                <a href="#" target="_self"> Contatos </a>
             </li>
             <li>
-                <a href="atracoes.html" target="_self"> Atrações </a>
-            </li>
-            <li>
-                <a href="ingresso.html" target="_self"> Ingressos </a>
+                <a href="./ingresso.html" target="_self"> Ingressos </a>
             </li>
         </ul>
     </div>
@@ -208,6 +205,12 @@
 </footer>
 
     <script src="https://kit.fontawesome.com/43e593e5ea.js" crossorigin="anonymous" defer></script>
-    <script src="../javascript/script.js" defer></script>
+    <script defer>
+        const logo = document.getElementById('logoContainer');
+        const ticketBtn = document.getElementById('btnTickets');
+
+        ticketBtn.addEventListener('click', () => window.open('../../src/pages/ingresso.html', '_self'));
+        logo.addEventListener('click', () => window.open('../../index.html', '_self'));
+    </script>
 </body>
 </html>

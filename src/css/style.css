@@ -175,12 +175,94 @@
 /* CARDS */
 .container-cards{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 40px;
 }
     .attraction-card{
         height: 300px;
         width: 250px;
+    }
+
+/* OPENED CARDS */
+.opacitor{
+    width: 100%;
+    height: calc(100% * 4);
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+}
+.opened-card{
+    width: 90%;
+    height: 80vh;
+    background: var(--bg-1);
+    padding: 30px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1200;
+}
+    .opened-card-container{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 30px;
+        position: relative;
+    }
+    .opened-card-image{
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+    .opened-card-title{
+        line-height: 1.1;
+        margin-bottom: 0 !important;
+    }
+    .opened-card-subtitle{
+        text-align: center;
+        color: rgba(0, 0, 0, 0.7);
+        line-height: 3;
+    }
+    .opened-card-button{
+        width: 40%;
+        height: 40px;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+    }
+    .opened-card-text{
+        margin: 0 20px !important;
+        text-align: justify;
+        font-size: 1.3em;
+        line-height: 1.5;
+        letter-spacing: .5px;
+        text-indent: 2em;
+    }
+    .opened-card-text span{
+        font-family: var(--oswald);
+        font-weight: bold;
+        color: var(--green2);
+    }
+    .opened-card-text ul li{
+        font-size: 0.8em !important;
     }
 
 
@@ -792,130 +874,3 @@
         grid-column: 1 / -1;
         height: 40px;
     }
-
-/* RESPONSIVIDADE */
-/* RESPONSIVIDADE */
-@media (max-width: 1024px){
-    .banner-title h1{
-        font-size: 70px;
-    }
-    .ticket-hero-text h1{
-        font-size: 2.5rem;
-    }
-    .checkout-section{
-        grid-template-columns: 1fr;
-    }
-    .checkout-intro{
-        text-align: center;
-    }
-    .checkout-intro h1{
-        text-align: center;
-    }
-}
- 
-@media (max-width: 768px){
-    .banner{
-        height: auto;
-        grid-template-columns: 1fr;
-        padding: 30px 8%;
-        gap: 30px;
-    }
-    .banner::after{
-        height: 100%;
-    }
-    .banner-title h1{
-        font-size: 50px;
-    }
-    .banner-timer{
-        height: auto;
-    }
-    .banner-timer img{
-        max-height: 200px;
-    }
-    .timer-divs{
-        grid-template-columns: repeat(4, 1fr);
-        gap: 8px;
-    }
-    .timer-divs div p{
-        font-size: 2.5em;
-    }
-    .introduction{
-        grid-template-columns: 1fr;
-    }
-    .introduction div:nth-child(1){
-        padding: 0 5%;
-    }
-    .container-image{
-        height: 300px;
-        border-right: 2px solid rgba(255, 255, 255, 0.7);
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 0;
-    }
-    .schedule{
-        grid-template-columns: 1fr;
-    }
-    .contact{
-        grid-template-columns: 1fr;
-    }
-    .ticket-hero{
-        grid-template-columns: 1fr;
-        padding: 25px 5% 35px;
-        min-height: auto;
-    }
-    .ticket-hero-text > p{
-        max-width: 100%;
-    }
-    .ticket-hero-image{
-        min-height: 220px;
-        border-radius: 20px;
-    }
-    .event-details{
-        grid-template-columns: 1fr;
-    }
-    .event-details > div{
-        border-right: none;
-        border-bottom: 2px solid var(--bg-3);
-        padding-bottom: 10px;
-    }
-    .event-details > div:last-child{
-        border-bottom: none;
-    }
-    .buying-area{
-        grid-template-columns: 1fr;
-    }
-    .checkout-form{
-        grid-template-columns: 1fr;
-    }
-}
- 
-@media (max-width: 480px){
-    .banner-title h1{
-        font-size: 36px;
-    }
-    .banner-title h3, .banner-title h2{
-        font-size: 16px;
-    }
-    .banner-button{
-        flex-direction: column;
-        gap: 15px;
-        padding-right: 0;
-    }
-    .timer-divs{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-    .container-cards{
-        justify-content: center;
-    }
-    .attraction-card{
-        width: 100%;
-        max-width: 250px;
-    }
-    .ticket-heading h1{
-        font-size: 2em;
-    }
-    .checkout-intro h1{
-        font-size: 2em;
-    }
-}

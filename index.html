@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <title> BDA 10 ANOS | Raízes da Nova Terra </title>
 </head>
-<body>
+<body id="indexBody">
 <header>
     <div class="header-logo" id="logoContainer">
         <img src="./src/assets/icons/logo.png" alt="BDA 10 Anos" class="logo" id="logo">
@@ -118,38 +118,49 @@
         <div class="container-cards">
 
             <!-- Btalha de Rimas -->
-            <div class="card attraction-card">
+            <div class="card attraction-card" id="cardRhymes">
                 <img src="https://meaple.com.br/api/og?url=https://files.meaple.com.br/meaple/4061136e-a7e4-4408-b9ac-48faba21ec31.png" 
-                alt="Batalha de Rimas">
-                <h3> Batalha de Rimas </h3>
-                <p> O confronto entre 16 trios de MCs que brilha no centro do octogono. </p>
+                alt="Batalha de Rimas" class="card-image">
+                <h3 class="card-title"> Batalha de Rimas </h3>
+                <p class="card-text"> O confronto entre 16 trios de MCs que brilha no centro do octogono. </p>
             </div>
 
             <!-- Batalha de DJs -->
-            <div class="card attraction-card">
+            <div class="card attraction-card" id="cardDj">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKlmzCvWzbmfXUYp1UNkTOUwaFrpVf1eFf6qQ_5omWbhPs7z1c_ZCGyvbp&s=10" 
-                alt="Batalha de DJs" style="object-position: top;">
-                <h3> Batalha de DJs </h3>
-                <p> Disputa entre duas lendas que venceram o Brasil e o mundo. </p>
+                alt="Batalha de DJs" class="card-image">
+                <h3 class="card-title"> Batalha de DJs </h3>
+                <p class="card-text"> Disputa entre duas lendas que venceram o Brasil e o mundo. </p>
             </div>
 
             <!-- Batalha de Grafite -->
-            <div class="card attraction-card">
+            <div class="card attraction-card" id="cardGraffiti">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU0szkWo6BeCHbhLfE0dRJl6UMW24D2GSC-EZYF0afKSg--EF0Ey5TV8Os&s=10" 
-                alt="Batalha de Graffiti" style="object-position: center;">
-                <h3> Batalha de Grafite </h3>
-                <p> Confronto entre equipes que pintam paredes e marcam a hitória. </p>
+                alt="Batalha de Graffiti" class="card-image">
+                <h3 class="card-title"> Batalha de Grafite </h3>
+                <p class="card-text"> Confronto entre equipes que pintam paredes e marcam a hitória. </p>
             </div>
 
             <!-- Batalha de Breaking -->
-                <div class="card attraction-card">
+            <div class="card attraction-card" id="cardBreak">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBfEOoNhVa7z2B2n30wMEeg_45cGL-_Q8tDPgd5C-eQqfxyn98cpYhjyky&s=10" 
-                alt="Batalha de Break" style="object-position: center;">
-                <h3> Batalha de Breaking </h3>
-                <p> Breakers que sustentam o peso da dança e o giro da cultura. </p>
+                alt="Batalha de Break" class="card-image">
+                <h3 class="card-title"> Batalha de Breaking </h3>
+                <p class="card-text"> Breakers que sustentam o peso da dança e o giro da cultura. </p>
+            </div>
+
+            <!-- Alimentos -->
+            <div class="card attraction-card" id="cardFood">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAQL2EGx3OLIRFH1m6m3cr6x0mL9_RHiV0qZqgHYGq_TM5l6WL8cFy9hDZ&s=10" 
+                alt="Comidas e Bebidas" class="card-image">
+                <h3 class="card-title"> Comidas e Bebidas </h3>
+                <p class="card-text"> Cardápio das opções de alimentos que você pode comprar ou levar. </p>
             </div>
         </div>     
     </section>
+
+    <div id="opacitor" class="opacitor"></div>
+    <section id="openedCard" class="opened-card"></section>
 </main>
 
 <footer>
@@ -164,19 +175,16 @@
         <h1> NAVEGAÇÃO </h1>
         <ul>
             <li>
-                <a href="./index.html" target="_self"> Home </a>
+                <a href="#" target="_self"> Home </a>
             </li>
             <li>
-                <a href="./pages/evento.html" target="_self"> Evento </a>
+                <a href="./src/pages/evento.html" target="_self"> Evento </a>
             </li>
             <li>
-                <a href="./pages/contatos.html" target="_self"> Contatos </a>
+                <a href="./src/pages/contatos.html" target="_self"> Contatos </a>
             </li>
             <li>
-                <a href="./pages/atracoes.html" target="_self"> Atrações </a>
-            </li>
-            <li>
-                <a href="./pages/ingresso.html" target="_self"> Ingressos </a>
+                <a href="./src/pages/ingresso.html" target="_self"> Ingressos </a>
             </li>
         </ul>
     </div>
@@ -207,6 +215,9 @@
 
     <script src="https://kit.fontawesome.com/43e593e5ea.js" crossorigin="anonymous" defer></script>
     <script src="./src/javascript/main.js" defer></script>
-    <script src="./src/javascript/script.js" defer></script>
+    <script defer>
+        const ticketBtn = document.getElementById('btnTickets');
+        ticketBtn.addEventListener('click', () => window.open('../../src/pages/ingresso.html', '_self'));
+    </script>
 </body>
 </html>

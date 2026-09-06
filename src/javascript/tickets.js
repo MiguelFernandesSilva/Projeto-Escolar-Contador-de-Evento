@@ -129,9 +129,9 @@ if (continueButton) {
                 behavior: 'smooth',
                 block: 'start'
             });
-        }
+        };
     });
-}
+};
 
 atualizarCompra();
 
