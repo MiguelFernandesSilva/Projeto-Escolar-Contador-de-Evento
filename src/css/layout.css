@@ -290,3 +290,111 @@ footer{
         color: var(--green2);
         cursor: pointer;
     }
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px){
+    /* Header */
+    header{
+        padding: 30px 10px;
+        max-width: 750px;
+    }
+    header + *{
+        padding-top: 90px;
+    }
+    .header-logo div span{
+        font-size: 12px;
+    }
+    .links-list{
+        font-size: 15px;
+        gap: 10px;
+    }
+    .header-button button{
+        width: 120px;
+        font-size: .6em;
+    }
+
+    /* Componentes */
+    .components{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px 0;
+    }
+    .component-with-icon div:nth-child(1){
+        display: none;
+    }
+    .component-icon{
+        display: none;
+    }
+
+    /* Footer */
+    footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+    }
+    footer div{
+        justify-content: center;
+        text-align: center;
+    }
+    footer div h1{
+        align-self: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px){
+    /* Header */
+    header{
+        padding: 30px 10px;
+        max-width: 500px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+    }
+    header + *{
+        padding-top: 200px;
+    }
+    header div{
+        justify-content: center !important;
+    }
+    header div:nth-child(1){
+        display: none;
+    }
+
+    /* Componentes */
+    .components{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 30px 0;
+    }
+    .components div{
+        border: none;
+    }
+    .component-with-icon div:nth-child(1){
+        display: none;
+    }
+    .component-icon{
+        display: none;
+    }
+
+    /* Footer */
+    footer{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: center;
+    }
+    footer div{
+        justify-content: center;
+        text-align: center;
+    }
+    footer div h1{
+        align-self: center;
+        text-align: center;
+    }
+    .footer-logo{
+        margin-top: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
