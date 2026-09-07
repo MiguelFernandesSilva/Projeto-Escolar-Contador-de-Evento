@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Miguel Fernandes Silva">
-    <meta name="description" content="Informações sobre o evento escolhido">
-    <meta name="keywords" content="Trios, Atrações, Programação, Horários">
+    <meta name="description" content="Garanta seu ingresso para a Batalha da Aldeia 10 Anos">
+    <meta name="keywords" content="Ingressos, Batalha da Aldeia, BDA, Evento">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon_io/favicon-32x32.png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/components.css">
-    <title> BDA 10 ANOS | Sobre o Evento </title>
+    <title> BDA 10 ANOS | Ingressos </title>
 </head>
 <body>
 <header>
@@ -23,13 +23,15 @@
             <span> 10 Anos de História </span>
         </div>
     </div>
-    <div class=" header-links">
+
+    <div class="header-links">
         <ul class="links-list">
-            <li><a href="../index.html" target="_self"> HOME </a></li>
+            <li><a href="../../index.html" target="_self"> HOME </a></li>
             <li><a href="./evento.html" target="_self"> EVENTO </a></li>
             <li><a href="./contatos.html" target="_self"> CONTATOS </a></li>
         </ul>
     </div>
+
     <div class="header-button">
         <button class="green-btn biggify" id="btnTickets">
             GARANTA SEU LUGAR
@@ -39,74 +41,61 @@
 
 <main>
     <!-- INTRODUÇÃO -->
-    <section class="introduction">
-        <div>
+    <section class="ticket-hero">
+        <div class="ticket-hero-text">
             <h3> 10 ANOS DE HISTÓRIA </h3>
-            <h1> GARANTA SEU LUGAR </h1>
-            <p> Faça parte do décimo aniversário da BDA. Um evento que vai além das rimas, é sobre cultura, resistência e transformação. </p>
-        </div>
-        <div>
-        </div>
-    </section>
-
-    <!-- COMPONENTES -->
-    <section class="components">
-        <!-- Data -->
-        <div class="component-with-icon">
-            <div>
-                <i class="fa-solid fa-calendar-days component-icon"></i>
-            </div>
-            <div>
-                <h2> DATA (FALSA) </h2>
-                <p> Dia 09 de Outubro de 2026 </p>
-            </div>
-        </div>
-
-        <!-- Horário -->
-        <div class="component-with-icon">
-            <div>
-                <i class="fa-solid fa-clock component-icon"></i>
-            </div>
-            <div>
-                <h2> HORÁRIO </h2>
-                <p> Das 13H às 22H </p>
+            <h1> GARANTA<br> SEU LUGAR. </h1>
+            <p> Faça parte da celebração de 10 anos da Batalha da Aldeia. Um evento que vai além das rimas, é sobre cultura, resistência e transformação. </p>
+            <div class="event-details">
+                <div>
+                    <i class="fa-solid fa-calendar-days component-icon"></i>
+                    <div>
+                        <strong> DATA </strong>
+                        <p> 12 de Outubro de 2026 </p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-regular fa-clock component-icon"></i>
+                    <div>
+                        <strong> HORÁRIO </strong>
+                        <p> 13h às 23h </p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-location-dot component-icon"></i>
+                    <div>
+                        <strong> LOCAL </strong>
+                        <p> Arena Anhangabaú<br> São Paulo - SP </p>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <!-- Local -->
-        <div class="component-with-icon">
-            <div>
-                <i class="fa-solid fa-location-dot component-icon"></i>
-            </div>
-            <div>
-                <h2> LOCAL </h2>
-                <p id="place" style="cursor: pointer;"> Vale do Anhangabaú - SP </p>
-            </div>
-        </div>
+        <div class="ticket-hero-image"></div>
     </section>
 
     <!-- COMPRA DE INGRESSOS -->
     <section class="ticket-area">
-        <h2> Ingressos </h2>
-        <h1> ESCOLHA O SEU </h1>
-        <p> Selecione o tipo de ingresso e a quantidade desejada. </p>
-        <p> Garanta seu lugar nessa edição história! </p>
+        <div class="ticket-heading">
+            <h2> INGRESSOS </h2>
+            <h1> ESCOLHA SEU INGRESSO </h1>
+            <p> Selecione o tipo de ingresso e a quantidade desejada.<br> Garanta seu lugar nessa edição histórica! </p>
+        </div>
         <div class="buying-area">
             <form>
-                <div id="defaultTicket">
+                <div id="defaultTicket" class="activated-div">
                     <div class="left-side">
                         <div class="left-icon">
                             <i class="fa-solid fa-ticket"></i>
                         </div>
                         <div class="left-text">
                             <strong> NORMAL </strong>
-                            <span> Acesso a área geral do evento. </span>
+                            <span> Acesso à área geral do evento. </span>
                         </div>
                     </div>
                     <div class="right-side">
                         <strong> R$ 35,00 </strong>
-                        <button type="button" class="radio-button" id="radioBtn">
-                            <span></span>
+                        <button type="button" class="radio-button activated-button" id="radioBtn">
+                            <span class="activated-radio"></span>
                         </button>
                     </div>
                 </div>
@@ -115,11 +104,11 @@
                 <div id="vipTicket">
                     <div class="left-side">
                         <div class="left-icon">
-                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-crown"></i>
                         </div>
                         <div class="left-text">
                             <strong> VIP </strong>
-                            <span> Acesso exclusivo a camarotes. <br> Mais conforto e melhor visão. </span>
+                            <span> Área exclusiva próxima ao palco.<br> Mais conforto e melhor visão. </span>
                         </div>
                     </div>
                     <div class="right-side">
@@ -134,11 +123,11 @@
                 <div id="premiumTicket">
                     <div class="left-side">
                         <div class="left-icon">
-                            <i class="fa-solid fa-crown"></i>
+                            <i class="fa-regular fa-star"></i>
                         </div>
                         <div class="left-text">
                             <strong> PREMIUM </strong>
-                            <span> Acesso VIP + Benefícios exclusivos. </span>
+                            <span> Acesso especial + benefícios exclusivos. </span>
                         </div>
                     </div>
                     <div class="right-side">
@@ -154,20 +143,20 @@
                         <p> Quantos ingressos? </p>
                     </div>
                     <div class="visualizer">
-                        <button type="button" id="decreaseTickets"> - </button>
-                        <div class="visor" id="visor"> <p> 0 </p> </div>
+                        <button type="button" id="decreaseTickets"> − </button>
+                        <div class="visor" id="visor"> <p> 1 </p> </div>
                         <button type="button" id="addTickets"> + </button>
                     </div>
                 </div>
             </form>
 
-            <!-- NOTA FISCAL -->
+            <!-- RESUMO DA COMPRA -->
             <div class="fiscal-note">
                 <h1> RESUMO DA COMPRA </h1>
-                <div>
+                <div class="fiscal-logo">
                     <img src="../assets/icons/logo.png" alt="BDA 10 ANOS">
                     <div>
-                        <p> BATALHA DA ALDEIA </p>
+                        <p> BATALHA<br> DA ALDEIA </p>
                         <span> 10 ANOS </span>
                     </div>
                 </div>
@@ -176,25 +165,25 @@
 
                 <div class="note-item">
                     <p> Ingresso </p>
-                    <p id="ticketType"> - </p>
+                    <p id="ticketType"> Pista </p>
                 </div>
                 <div class="note-item">
                     <p> Quantidade </p>
-                    <p id="ticketQuantity"> - </p>
+                    <p id="ticketQuantity"> 1 </p>
                 </div>
 
                 <hr>
 
                 <div class="note-item">
                     <p> Subtotal </p>
-                    <p id="ticketPrice"> - </p>
+                    <p id="ticketPrice"> R$ 35,00 </p>
                 </div>
 
                 <hr>
 
                 <div class="note-item">
                     <strong> Total </strong>
-                    <strong id="ticketTotal"> - </strong>
+                    <strong id="ticketTotal"> R$ 35,00 </strong>
                 </div>
 
                 <button class="green-btn translate">
@@ -202,48 +191,77 @@
                     <i class="fa-solid fa-arrow-right"></i>
                 </button>
 
-                <span>
+                <p class="secure-note">
                     <i class="fa-solid fa-lock"></i>
                     Compra segura e confirmação por e-mail.
-                </span>
+                </p>
             </div>
         </div>
+    </section>
+
+    <!-- FINALIZAÇÃO -->
+    <section class="checkout-section">
+        <div class="checkout-intro">
+            <h2> FINALIZAÇÃO </h2>
+            <h1> SEUS DADOS </h1>
+            <p> Informe seus dados para receber a confirmação<br> do seu ingresso e todas as informações do evento. </p>
+        </div>
+        <form class="checkout-form">
+            <label>
+                Nome completo <span style="color: red;"> * </span>
+                <input type="text" placeholder="Seu nome">
+            </label>
+            <label>
+                E-mail <span style="color: red;"> * </span>
+                <input type="email" placeholder="seu@email.com">
+            </label>
+            <label>
+                WhatsApp <span style="color: red;"> * </span>
+                <input type="tel" placeholder="(11) 99999-9999">
+            </label>
+            <label class="agreement">
+                <input type="checkbox">
+                Concordo com os termos de compra e com as informações do evento.
+            </label>
+            <button type="submit" class="green-btn">
+                FINALIZAR PEDIDO
+                <i class="fa-solid fa-ticket"></i>
+            </button>
+        </form>
     </section>
 </main>
 
 <!-- FOOTER -->
-<footer>
+<footer class="ticket-footer">
     <div class="footer-logo">
-        <img src="../assets/icons/logo.png" alt="BDA 10 ANOS">
+        <img src="./assets/icons/logo.png" alt="BDA 10 ANOS">
         <div>
             <h1> BATALHA <br> DA ALDEIA </h1>
             <p> Do chão que viemos, para o futuro que vamos criar. </p>
         </div>
     </div>
-    
     <div class="footer-nav">
         <h1> NAVEGAÇÃO </h1>
-         <ul>
+        <ul>
             <li>
-                <a href="../index.html" target="_self"> Home </a>
+                <a href="./index.html" target="_self"> Home </a>
             </li>
             <li>
-                <a href="./evento.html" target="_self"> Evento </a>
+                <a href="./pages/evento.html" target="_self"> Evento </a>
             </li>
             <li>
-                <a href="contatos.html" target="_self"> Contatos </a>
+                <a href="./pages/contatos.html" target="_self"> Contatos </a>
             </li>
             <li>
-                <a href="atracoes.html" target="_self"> Atrações </a>
+                <a href="./pages/atracoes.html" target="_self"> Atrações </a>
             </li>
             <li>
-                <a href="#" target="_self"> Ingressos </a>
+                <a href="./pages/ingresso.html" target="_self"> Ingressos </a>
             </li>
         </ul>
     </div>
-
     <div class="footer-socials">
-        <h1> SIGA NOS </h1>
+        <h1> SIGA-NOS </h1>
         <ul>
             <li>
                 <i class="fa-brands fa-instagram social-icon"></i>
@@ -266,9 +284,13 @@
         </ul>
     </div>
 </footer>
-    
+
     <script src="https://kit.fontawesome.com/43e593e5ea.js" crossorigin="anonymous" defer></script>
     <script src="../javascript/script.js" defer></script>
-    <script src="../javascript/event.js" defer></script>
+    <script src="../javascript/tickets.js" defer></script>
+    <script>
+        const ticketBtn = document.getElementById('btnTickets');
+        ticketBtn.addEventListener('click', (event) => location.reload());
+    </script>
 </body>
 </html>

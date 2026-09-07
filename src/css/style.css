@@ -389,53 +389,137 @@
     }
 
 /* COMPRA DOS INGRESSOS (ingressos.html) */
-.ticket-area{
+.ticket-hero{
     width: 100%;
-    padding: 0 5%;
-}
-    .ticket-area h1{
-        margin-bottom: 0 !important;
-        text-align: left;
-        font-size: 3em;
-    }
-    .ticket-area h2{
-        color: var(--orange);
-        font-size: 1.5em;
-    }
-    .ticket-area p{
-        text-align: left;
-        line-height: 1.5;
-        letter-spacing: 1.5px;
-    }
-
-/* Área de compras */
-.buying-area{
-    margin: 60px 0;
+    min-height: 380px;
+    padding: 25px 0 35px 5%;
+    margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 35px;
+    position: relative;
+}
+
+.ticket-hero-text{
+    position: relative;
+    z-index: 2;
+}
+    .ticket-hero-text h3{
+        color: var(--orange);
+        font-family: var(--fira-code) !important;
+        font-size: 1em;
+        letter-spacing: 2px;
+        line-height: 2;
+    }
+    .ticket-hero-text h1{
+        color: var(--green2);
+        font-family: var(--sedwick) !important;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        text-align: left;
+    }
+    .ticket-hero-text > p{
+        max-width: 75%;
+        line-height: 1.5;
+    }
+    .ticket-hero-image{
+        min-height: 320px;
+        width: 100%;
+        background-image: url('../assets/images/event-background.jfif');
+        background-size: cover;
+        background-position: center 85%;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 20px 0 0 20px; 
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+        z-index: 2;
+    }
+
+/* Componentes */
+.event-details{
+    height: fit-content;
+    background: var(--bg-2);
+    padding: 10px 0;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+    .event-details > div{
+        min-height: 55px;
+        padding-right: 12px;
+        border-right: 2px solid var(--bg-3);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .event-details > div:last-child{
+        border-right: none;
+    }
+    .component-icon{
+        font-size: 2em;
+        color: var(--green2);
+    }
+    .event-details strong{
+        font-family: var(--oswald);
+        font-size: 1.4em;
+        color: var(--green2);
+    }
+    .event-details p{
+        line-height: 1.4;
+    }
+
+/* Ingressos */
+.ticket-area{
+    width: 100%;
+    padding: 25px 5%;
+}
+    .ticket-heading h2{
+        color: var(--orange);
+        font-family: var(--fira-code) !important;
+        font-size: 1em;
+        letter-spacing: 1px;
+    }
+    .ticket-heading h1{
+        margin-bottom: 10px;
+        color: var(--green2);
+        font-size: 3em;
+        text-align: left;
+    }
+    .ticket-heading p{
+        line-height: 1.5;
+        letter-spacing: 1px;
+    }
+
+.buying-area{
+    margin: 25px 0 5px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: start;
     gap: 30px;
 }
-.buying-area form{
-    display: inherit;
-    grid-template-rows: repeat(4, 1fr);
-    gap: 20px;
-}
-    .buying-area form div{
+    .buying-area form{
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 15px;
+    }
+    .buying-area form > div{
         width: 100%;
-        min-height: 90px;
-        padding: 0 10px 0 5px;
+        min-height: 80px;
+        padding: 10px 15px;
         border: 1px solid rgba(0, 0, 0, 0.3);
         border-radius: 5px;
-        display: inherit;
+        display: grid;
         align-items: center;
         grid-template-columns: 2fr 1fr;
     }
-    .activated-div{
-        border: 1px solid var(--green2) !important;
+    .buying-area form > div.activated-div{
+        border: 2px solid var(--green1) !important;
     }
     .buying-area form div div{
-        display: flex;
         border: none;
     }
     .buying-area div strong{
@@ -449,163 +533,389 @@
         display: flex;
         justify-content: start;
         align-items: center;
-        gap: 10px;
+        gap: 15px;
     }
         .left-icon{
-            max-width: 60px;
-            font-size: 3em;
+            min-width: 45px;
+            max-width: 45px;
+            font-size: 2em;
             color: var(--green2);
+            text-align: center;
         }
         .left-text{
-            display: inherit;
+            display: flex !important;
             flex-direction: column;
             justify-content: center;
             align-items: start;
         }
         .left-text strong{
             width: 100%;
+            font-size: 1.5em;
         }
         .left-text span{
             width: 100%;
             font-family: var(--poppin);
             font-size: 1em;
-            text-wrap: wrap;
+            line-height: 1.5;
         }
     .right-side{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 15px;
     }
-    .radio-button{
-        height: 20px;
-        width: 20px;
-        padding: 2px;
-        aspect-ratio: 1 / 1;
-        border: 2px solid rgba(0, 0, 0, 0.3);
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        .right-side > strong{
+            font-size: 1.5em;
+            white-space: nowrap;
+        }
+
+.radio-button{
+    height: 20px;
+    width: 20px;
+    padding: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
     .radio-button.activated-button{
         border: 2px solid var(--green2) !important;
     }
-        .radio-button span{
-            content: '';
-            width: 100%;
-            height: 100%;
-            aspect-ratio: 1 / 1;
-            background: var(--green2);
-            border: none;
-            border-radius: 50%;
-            display: none;
-        }
-        span.activated-radio{
-            display: inline-block;
-        }
-    
-    /* Contagem */
-    #ticketsQuantity{
-        padding: 0 20px 0 10px;
-        display: grid;
-        grid-template-columns: 3fr 1fr;
+    .radio-button span{
+        width: 100%;
+        height: 100%;
+        background: var(--green2);
+        border: none;
+        border-radius: 50%;
+        display: none;
     }
-        #ticketsQuantity div:nth-child(1){
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
+    span.activated-radio{
+        display: inline-block;
+    }
+
+/* Contador de ingressos */
+#ticketsQuantity{
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+#ticketsQuantity div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+#ticketsQuantity strong{
+    font-size: 1.5em !important;
+    letter-spacing: 1px;
+}
+#ticketsQuantity p{
+    font-size: 1em;
+}
+.visualizer{
+    font-family: var(--fira-code);
+    display: flex;
+    align-items: center;
+    justify-content: end !important;
+    gap: 0;
+}
+    .visualizer button, .visualizer div{
+        width: 35px;
+        max-width: 35px;
+        height: 35px;
+        max-height: 35px;
+        text-align: center;
+    }
+    .visualizer button{
+        background: var(--green1);
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border: 1px solid var(--green2);
+        cursor: pointer;
+        transition: background .3s ease;
+    }
+        .visualizer button:nth-child(1){
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
         }
-        .visualizer{
-            font-family: var(--fira-code);
-            display: flex;
-            align-items: center;
-            justify-content: end !important;
-            gap: 0;
+        .visualizer button:nth-child(3){
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
         }
-        .visualizer button, .visualizer div{
-            width: 30px;
-            max-width: 30px;
-            height: 30px;
-            max-height: 30px;
-            text-align: center;
+        .visualizer button:hover{
+            background: var(--green2);
         }
-        .visualizer button{
-            background: var(--green1);
-            color: white;
-            font-size: 1em;
-            font-weight: bold;
-            border: 1px solid var(--green2);
-            cursor: pointer;
-            transition: background .3s ease;
-        }
-            .visualizer button:nth-child(1){
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;
-            }
-            .visualizer button:nth-child(3){
-                border-top-right-radius: 5px;
-                border-bottom-right-radius: 5px;
-            }
-            .visualizer button:hover{
-                background: var(--green2)
-            }
-        .visor{
-            width: 100%;
-            padding: 0 !important;
-            border: 1px solid var(--green2);
-        }
-        .visor p{
-            max-height: 30px;
-            width: 100%;
-            text-align: center;
-            font-size: 1.2em;
-            border-top: 1px solid var(--green2);
-            border-bottom: 1px solid var(--green2);
-        }
-    
-/* Nota fiscal */
+.visor{
+    width: 100%;
+    padding: 0 !important;
+    border: none !important;
+}
+    .visor p{
+        max-height: 32px;
+        width: 100%;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;
+    }
 .fiscal-note{
+    min-height: 440px;
+    padding: 25px 30px;
     background: var(--bg-2);
-    padding: 30px 5%;
     border: none;
-    border-radius: 20px;
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 9px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
     .fiscal-note h1{
+        margin-bottom: 20px;
+        color: var(--green2);
         font-size: 2em;
         text-align: center;
     }
-    .fiscal-note div{
-        margin: 30px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
+.fiscal-logo{
+    margin: 0 0 15px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+    .fiscal-note .fiscal-logo img{
+        height: 75px;
+        width: 75px;
     }
-    .fiscal-note div div{
-        display: block;
-    }
-    .fiscal-note div img{
-        height: 100px;
-        width: 100px;
-    }
-    .fiscal-note div p{
-        font-family: var(--sedwick);
-        font-weight: bold;
+    .fiscal-logo p{
+        font-family: var(--oswald) !important;
+        font-weight: 600;
         font-size: 1.5em;
+        line-height: 1;
     }
-    .fiscal-note div span{
-        font-family: var(--poppin);
+    .fiscal-logo span{
+        font-family: var(--fira-code);
         color: var(--green1);
+        font-size: 1em;
         font-weight: bold;
         letter-spacing: 2px;
     }
     .fiscal-note hr{
+        width: 100%;
+        margin: 10px 0;
         box-shadow: none;
+        border: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .note-item{
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
     }
     .note-item p{
-        font-family: var(--poppin) !important;
+        font-size: 1em !important;
+    }
+    .note-item p:nth-child(2){
+        font-weight: bold;
+        font-family: var(--fira-code) !important;
+    }
+    .note-item strong{
+        font-size: 2em;
+    }
+    .fiscal-note > .green-btn{
+        width: 100%;
+        height: 45px;
+        margin-top: 15px;
+    }
+    .secure-note{
+        margin: 12px 0 0 !important;
+        text-align: left;
         font-size: 1em;
     }
+    .secure-note svg{
+        margin-right: 10px;
+        color: var(--green2);
+    }
+
+.checkout-section{
+    width: 90%;
+    padding: 20px 5%;
+    margin: 0 auto;
+    margin-bottom: 30px !important;
+    background: var(--bg-2);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+    align-items: center;
+}
+    .checkout-intro h2{
+        color: var(--orange);
+        font-family: var(--fira-code) !important;
+        font-size: 1.3em;
+    }
+    .checkout-intro h1{
+        margin-bottom: 20px;
+        color: var(--green2);
+        font-size: 3em;
+        line-height: 1;
+        text-align: left;
+    }
+    .checkout-intro p{
+        font-size: 1em;
+        line-height: 1.7;
+    }
+.checkout-form{
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+}
+    .checkout-form label{
+        font-family: var(--poppin);
+        font-size: 1em;
+    }
+    .checkout-form .agreement{
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .checkout-form .agreement input{
+        width: 14px;
+        height: 14px;
+    }
+    .checkout-form button{
+        grid-column: 1 / -1;
+        height: 40px;
+    }
+
+/* RESPONSIVIDADE */
+/* RESPONSIVIDADE */
+@media (max-width: 1024px){
+    .banner-title h1{
+        font-size: 70px;
+    }
+    .ticket-hero-text h1{
+        font-size: 2.5rem;
+    }
+    .checkout-section{
+        grid-template-columns: 1fr;
+    }
+    .checkout-intro{
+        text-align: center;
+    }
+    .checkout-intro h1{
+        text-align: center;
+    }
+}
+ 
+@media (max-width: 768px){
+    .banner{
+        height: auto;
+        grid-template-columns: 1fr;
+        padding: 30px 8%;
+        gap: 30px;
+    }
+    .banner::after{
+        height: 100%;
+    }
+    .banner-title h1{
+        font-size: 50px;
+    }
+    .banner-timer{
+        height: auto;
+    }
+    .banner-timer img{
+        max-height: 200px;
+    }
+    .timer-divs{
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+    }
+    .timer-divs div p{
+        font-size: 2.5em;
+    }
+    .introduction{
+        grid-template-columns: 1fr;
+    }
+    .introduction div:nth-child(1){
+        padding: 0 5%;
+    }
+    .container-image{
+        height: 300px;
+        border-right: 2px solid rgba(255, 255, 255, 0.7);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+    }
+    .schedule{
+        grid-template-columns: 1fr;
+    }
+    .contact{
+        grid-template-columns: 1fr;
+    }
+    .ticket-hero{
+        grid-template-columns: 1fr;
+        padding: 25px 5% 35px;
+        min-height: auto;
+    }
+    .ticket-hero-text > p{
+        max-width: 100%;
+    }
+    .ticket-hero-image{
+        min-height: 220px;
+        border-radius: 20px;
+    }
+    .event-details{
+        grid-template-columns: 1fr;
+    }
+    .event-details > div{
+        border-right: none;
+        border-bottom: 2px solid var(--bg-3);
+        padding-bottom: 10px;
+    }
+    .event-details > div:last-child{
+        border-bottom: none;
+    }
+    .buying-area{
+        grid-template-columns: 1fr;
+    }
+    .checkout-form{
+        grid-template-columns: 1fr;
+    }
+}
+ 
+@media (max-width: 480px){
+    .banner-title h1{
+        font-size: 36px;
+    }
+    .banner-title h3, .banner-title h2{
+        font-size: 16px;
+    }
+    .banner-button{
+        flex-direction: column;
+        gap: 15px;
+        padding-right: 0;
+    }
+    .timer-divs{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .container-cards{
+        justify-content: center;
+    }
+    .attraction-card{
+        width: 100%;
+        max-width: 250px;
+    }
+    .ticket-heading h1{
+        font-size: 2em;
+    }
+    .checkout-intro h1{
+        font-size: 2em;
+    }
+}

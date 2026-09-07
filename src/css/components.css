@@ -121,3 +121,25 @@ textarea{
     font-family: var(--poppin);
     resize: none;
 }
+
+/* MEDIA QUERIE */
+@media (max-width: 768px){
+    .card{
+        max-height: none;
+    }
+    .card h3{
+        font-size: 22px;
+    }
+}
+ 
+@media (max-width: 480px){
+    .card h3{
+        font-size: 20px;
+    }
+    .card p{
+        font-size: 14px;
+    }
+    input, textarea{
+        width: 100%;
+    }
+}
